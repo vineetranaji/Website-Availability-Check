@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Water Plant - Gomathi Industries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .subheading {
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+
+        .small-text {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-top: -10px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .categories {
+            font-size: 1.2em;
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        select {
+            margin-left: 20px;
+            padding: 5px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            font-size: 1em;
+        }
+
+        .details {
+            font-size: 1.1em;
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+
+        .contact {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+
+        .dynamic-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        function updateDetails() {
+            var bottleSize = document.getElementById("bottle-sizes").value;
+            var infoDiv = document.getElementById("dynamic-info");
+            
+            // Display details based on selected size
+            if (bottleSize === "250ml") {
+                infoDiv.innerHTML = "<strong>250ml Water Bottle</strong><br>Cost: ₹10.00<br>Delivery: Available in 24 hours";
+            } else if (bottleSize === "500ml") {
+                infoDiv.innerHTML = "<strong>500ml Water Bottle</strong><br>Cost: ₹15.00<br>Delivery: Available in 24 hours";
+            } else if (bottleSize === "1000ml") {
+                infoDiv.innerHTML = "<strong>1000ml Water Bottle</strong><br>Cost: ₹20.00<br>Delivery: Available in 24 hours";
+            } else if (bottleSize === "2000ml") {
+                infoDiv.innerHTML = "<strong>2000ml Water Bottle</strong><br>Cost: ₹30.00<br>Delivery: Available in 24 hours";
+            } else {
+                infoDiv.innerHTML = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        
+        <!-- Highlighted Heading -->
+        <h1>Rainy Package Drinking Water</h1>
+        
+        <!-- Description Section -->
+        <div class="description">
+            <p>RO Processed, U.V Treated, & Ozonized</p>
+            <p>Best Before: 6 Months from Manufacturing Date</p>
+        </div>
+        
+        <!-- Categories Section -->
+        <div class="categories">
+            <h2>Categories</h2>
+            <p>1] Under Water Bottles:</p>
+            <label for="bottle-sizes">Choose bottle size:</label>
+            <select id="bottle-sizes" name="bottle-sizes" onchange="updateDetails()">
+                <option value="">Select size</option>
+                <option value="250ml">250ml</option>
+                <option value="500ml">500ml</option>
+                <option value="1000ml">1000ml</option>
+                <option value="2000ml">2000ml</option>
+            </select>
+
+            <p>2] Water Bubble: 20 Liters</p>
+            <p>MRP: ₹25.00</p>
+            <p>3] Packets: Water Pouch</p>
+            <p>MRP: ₹2.00</p>
+        </div>
+
+        <!-- Dynamic Information Section -->
+        <div id="dynamic-info" class="dynamic-info">
+            <!-- This area will update with details based on selection -->
+        </div>
+
+        <!-- Details Section -->
+        <div class="details">
+
+            <p>Lic. No: 13618009000275 | ISI: 14543 | CM/L: 6300053696</p>
+            <p>Manufactured by Sri Gomathi Industries</p>
+            <p>H. No: 1-51/2/5/11, Pangra (B) Village, Nizzamabad - 503 003</p>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="contact">
+            <p>For more details, contact: +91 9440354560</p>
+            <p>BIS Certification: <a href="https://www.bis.org.in" target="_blank">BIS Certification Details</a></p>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Gomathi Industries. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
